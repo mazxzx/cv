@@ -1,0 +1,46 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+body {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+
+
+.col
+{
+    margin: 1.5%;
+    border-radius: 10%;
+    border:solid;
+    border-color: black;
+}
+#habilidades .col, #contacto .col
+{
+    
+   /* text-align: center;*/
+}
+
+
+.eq-default-bscontainer-padding
+{ 
+    padding-top: calc(var(--bs-gutter-x) * .5);
+    padding-bottom: calc(var(--bs-gutter-x) * .5);
+}
+.black-border-solid
+{
+    border:solid;
+    border-color: black;
+}
+.white-txt
+{
+    color: white;
+}
+
+.dark-grey-translucent-bg
+{
+    background: rgba(0, 0, 0, 0.75);
+}
+.grey-translucent-bg 
+{
+    background: rgba(0, 0, 0, 0.12);
+}
+
