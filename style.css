@@ -9,31 +9,18 @@ body {
 .col
 {
     margin: 1.5%;
-    border-radius: 10%;
+   /* border-radius: 10%;*/
     border:solid;
     border-color: black;
 }
-#habilidades .col, #contacto .col
-{
-    
-   /* text-align: center;*/
-}
 
 
-.eq-default-bscontainer-padding
-{ 
-    padding-top: calc(var(--bs-gutter-x) * .5);
-    padding-bottom: calc(var(--bs-gutter-x) * .5);
-}
 .black-border-solid
 {
     border:solid;
     border-color: black;
 }
-.white-txt
-{
-    color: white;
-}
+
 
 .dark-grey-translucent-bg
 {
@@ -44,3 +31,6 @@ body {
     background: rgba(0, 0, 0, 0.12);
 }
 
+#footer {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
