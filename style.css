@@ -30,3 +30,16 @@ body {
     background: rgba(0, 0, 0, 0.12);
 }
 
+
+@media screen and (max-width: 768px) {
+   
+   .carousel-caption h4
+   {
+    font-size: small;
+   }
+   .carousel-caption
+   {
+    padding: 0;
+    opacity: 0.8;
+   }
+}

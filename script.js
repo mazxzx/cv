@@ -1,10 +1,9 @@
 
-async function load(){
+async function load()
+{
     const response =  await fetch('https://randomuser.me/api/');
     const names =  await response.json();
   
- 
-
     document.getElementById('thumbnail').src =names.results[0].picture.thumbnail;
     document.getElementById('foto_perfil').src = names.results[0].picture.large;
 
@@ -29,24 +28,12 @@ async function load(){
   
          
     
-  }
+}
+
 function get_year (user)
 {
-	let date = JSON.stringify(user.results[0].dob.date).split("");
-	return date[3] + date[4];
+    const date = JSON.stringify(user.results[0].dob.date).split("");
+    return date[3] + date[4];
 }
 
-function get_pattern()
-{
-  const canvas = document.getElementById('myCanvas');
-  const ctx = canvas.getContext('2d');
-
-  const img = new Image();
-  img.className = 'fa-sharp fa-regular fa-grid-2';
-  img.onload = function() {
-    const pattern = ctx.createPattern(img, 'repeat');
-    ctx.fillStyle = pattern;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-  };
-}
-  load(); 
+load(); 
