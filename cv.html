@@ -12,15 +12,15 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#header">
+<body class="bg-rpt-page" data-bs-spy="scroll" data-bs-target="#header" >
     
-     <nav class="navbar fixed-top navbar-light bg-light" id="header">
+     <nav class="navbar fixed-top navbar-light bg-light pb-0" id="header">
         
         <a href="#contacto" class="d-flex align-items-center">
           <img class="img-thumbnail " id="thumbnail" alt="thumbnail">
           <h1 class="navbar-brand mb-0" id="nombre"></h1>
         </a>
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs align-self-end">
 
           <li class="nav-item" id="nav_sobre">
            <a href="#sobre_mi" class="nav-link active">Sobre mi</a> 
@@ -39,9 +39,9 @@
           </li>
         </ul>
     </nav>
-
-      <div class="container mt-5 mb-5" id="sobre_mi" >
-        <div class="row row-cols-1 row-cols-lg-3  justify-content-center">
+  
+      <div class="container pt-5" id="sobre_mi" >
+        <div class="row row-cols-1 row-cols-lg-3 pt-5 mt-5 justify-content-center">
             <div class="col border border-3 border-dark p-3 rounded-5" >
                 <img id="foto_perfil" class="rounded-5 border border-3 border-dark  w-100" alt="foto de perfil">
             </div>
@@ -62,10 +62,10 @@
 
 
 
-      <div class="container mt-5 mb-5" id="habilidades" >
+      <div class="container pt-5" id="habilidades" >
 
         <div class="container mb-5 text-center">
-          <h1>Habilidades</h1>
+          <h1 class="bg-white border">Habilidades</h1>
         </div>
 
         <div class="row  align-items-stretch justify-content-center text-center" >
@@ -106,9 +106,9 @@
 
       </div>
 
-      <div class="container mt-5 mb-5" id="educacion">
+      <div class="container pt-5 " id="educacion">
         <div class="container mb-5 text-center">
-          <h1>Educacion</h1>
+          <h1 class="bg-white border">Educacion</h1>
         </div>
 
         <div class="row justify-content-center">
@@ -118,7 +118,7 @@
               <img src="logo-utn.png"  alt="logo-utn">
               <div class="card-body">
                 <h5 class="card-title">Lic. en Ciencias de la Computación</h5>
-                <p class="card-text">>Universidad Tecnológica de Bs. As.
+                <p class="card-text">Universidad Tecnológica de Bs. As.
                   2010-2014</p>            
               </div>
               
@@ -140,9 +140,9 @@
       </div>
       </div>
 
-      <div class="container mt-5 mb-5 " id="experiencia" >
+      <div class="container pt-5  " id="experiencia" >
         <div class="container mb-5 text-center">
-          <h1>Experiencia</h1>
+          <h1 class="bg-white border">Experiencia</h1>
         </div>
         
             <div class="col border border-3 border-dark rounded-pill overflow-hidden">
@@ -182,29 +182,31 @@
         
     </div> 
 
-    <div class="container mt5- mb-5" id="contacto">
+    <div class="container pt5- " id="contacto">
       <div class="container mb-5 text-center">
-        <h1>Contacto</h1>
+        <h1 class="bg-white border">Contacto</h1>
       </div>
       <div class="row justify-content-center text-center">
 
         <div class="col border border-3 border-dark  rounded-5">
 
           <img src="imgPhone.png"  class="mt-2" alt="iconTelefono">
-          <h6 id="numero"></h6>
+          <h6 class="pt-2" id="numero"></h6>
           
         </div>
 
         <div class="col border border-3 border-dark  rounded-5">
           <img src="imgMail.png"  class="mt-2" alt="iconEmail">
-          <h6 id="email"></h6>
+          <h6 class="pt-2" id="email"></h6>
         </div>
 
         <div class="col border border-3 border-dark  rounded-5">
-          <img src="imgMap.png"  class="mt-2" alt="iconMap">
-          <h6 id="timezone"></h6>
-          <h6 id="calle"></h6>
-          <h6 id="ciudad"></h6>
+            <img src="imgMap.png"  class="mt-2" alt="iconMap">
+          <div class="pt-2 span">
+            <h6 id="timezone"></h6>
+            <h6 id="calle"></h6>
+            <h6 id="ciudad"></h6>
+          </div>
         </div>
 
       </div>
@@ -221,7 +223,7 @@
          <a href="" class="nav-link active" id="face_user">
         
           <i class="fa-brands fa-facebook"></i>
-          <span id="fb_username"></span>
+          <span  id="fb_username"></span>
 
         </a> 
         </li>

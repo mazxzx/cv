@@ -18,13 +18,13 @@ async function load(){
     document.getElementById('ciudad').innerHTML = names.results[0].location.city + ', ' + names.results[0].location.state + ', ' + names.results[0].location.country; 
 
     
-    document.getElementById('fb_username').innerHTML = '@' + names.results[0].name.first + ' ' + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('tw_username').innerHTML = '@' + names.results[0].name.first + ' ' + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('insta_username').innerHTML = '@' + names.results[0].name.first + ' ' + names.results[0].name.last + names.results[0].name.last + get_year(names);
+    document.getElementById('fb_username').innerHTML = '@' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
+    document.getElementById('tw_username').innerHTML = '@' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
+    document.getElementById('insta_username').innerHTML = '@' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
 
-    document.getElementById('face_user').href = 'https://www.facebook.com/' + names.results[0].name.first + ' ' + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('tw_user').href = 'https://twitter.com/' + names.results[0].name.first + ' ' + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('insta_user').href =  'https://www.instagram.com/' + names.results[0].name.first + ' ' + names.results[0].name.last + names.results[0].name.last + get_year(names);
+    document.getElementById('face_user').href = 'https://www.facebook.com/' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
+    document.getElementById('tw_user').href = 'https://twitter.com/' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
+    document.getElementById('insta_user').href =  'https://www.instagram.com/' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
 
   
          
@@ -36,4 +36,17 @@ function get_year (user)
 	return date[3] + date[4];
 }
 
+function get_pattern()
+{
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
+
+  const img = new Image();
+  img.className = 'fa-sharp fa-regular fa-grid-2';
+  img.onload = function() {
+    const pattern = ctx.createPattern(img, 'repeat');
+    ctx.fillStyle = pattern;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  };
+}
   load(); 
