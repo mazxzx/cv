@@ -1,5 +1,5 @@
 
-async function load()
+async function load_user()
 {
     const response =  await fetch('https://randomuser.me/api/');
     const names =  await response.json();
@@ -36,4 +36,4 @@ function get_year (user)
     return date[3] + date[4];
 }
 
-load(); 
+load_user(); 
