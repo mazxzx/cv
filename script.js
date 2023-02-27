@@ -3,8 +3,7 @@ async function load_user()
 {
     const response =  await fetch('https://randomuser.me/api/');
     const names =  await response.json();
-    JSON.parse(names);
-  console.log(JSON);
+
     document.getElementById('thumbnail').src =names.results[0].picture.thumbnail;
     document.getElementById('foto_perfil').src = names.results[0].picture.large;
 
