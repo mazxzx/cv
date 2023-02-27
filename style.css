@@ -38,6 +38,11 @@ body {
    .carousel-caption
    {
     padding: 0;
+    
     opacity: 0.8;
+   }
+   .carousel-caption h6
+   {
+    margin-bottom: 0;
    }
 }

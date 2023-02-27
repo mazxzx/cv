@@ -1,39 +1,62 @@
+async function getJson(url) {
+    
+    return await fetch(new Request(url, { 
+        method: 'GET'
+      }))
+      .then(response => response.json())
+      .then(data => {
+        
+        {return data.results[0]}
+      })
+      .catch(e => console.error('error de fetch'));
 
-async function load_user()
-{
-    const response =  await fetch('https://randomuser.me/api/');
-    const names =  await response.json();
-
-    document.getElementById('thumbnail').src =names.results[0].picture.thumbnail;
-    document.getElementById('foto_perfil').src = names.results[0].picture.large;
-
-    document.getElementById('nombre').innerHTML = names.results[0].name.first + ' ' + names.results[0].name.last;
-
-    document.getElementById('numero').innerHTML =names.results[0].phone + '|' + names.results[0].cell
-    document.getElementById('email').innerHTML = names.results[0].email;
-
-    document.getElementById('timezone').innerHTML = 'UTC ' + names.results[0].location.timezone.offset;
-    document.getElementById('calle').innerHTML = names.results[0].location.street.name;
-    document.getElementById('ciudad').innerHTML = names.results[0].location.city + ', ' + names.results[0].location.state + ', ' + names.results[0].location.country; 
+  }
+   
 
     
-    document.getElementById('fb_username').innerHTML = '@' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('tw_username').innerHTML = '@' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('insta_username').innerHTML = '@' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
-
-    document.getElementById('face_user').href = 'https://www.facebook.com/' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('tw_user').href = 'https://twitter.com/' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
-    document.getElementById('insta_user').href =  'https://www.instagram.com/' + names.results[0].name.first + names.results[0].name.last + names.results[0].name.last + get_year(names);
-
-  
+    
          
     
-}
+
 
 function get_year (user)
 {
-    const date = user.results[0].dob.date.split("");
+    const date = user.dob.date.split("");
     return date[3] + date[4];
 }
 
-load_user(); 
+async function fill_cv(user)
+{
+    //console.log(user);
+    document.getElementById('thumbnail').src =user.picture.thumbnail;
+    document.getElementById('foto_perfil').src = user.picture.large;
+
+    document.getElementById('nombre').innerHTML = user.name.first + ' ' + user.name.last;
+
+    document.getElementById('numero').innerHTML =user.phone + '|' + user.cell
+    document.getElementById('email').innerHTML = user.email;
+
+    document.getElementById('timezone').innerHTML = 'UTC ' + user.location.timezone.offset;
+    document.getElementById('calle').innerHTML = user.location.street.name;
+    document.getElementById('ciudad').innerHTML = user.location.city + ', ' + user.location.state + ', ' + user.location.country; 
+
+    
+    document.getElementById('fb_username').innerHTML = '@' + user.name.first + user.name.last + user.name.last + get_year(user);
+    document.getElementById('tw_username').innerHTML = '@' + user.name.first + user.name.last + user.name.last + get_year(user);
+    document.getElementById('insta_username').innerHTML = '@' + user.name.first + user.name.last + user.name.last + get_year(user);
+
+    document.getElementById('face_user').href = 'https://www.facebook.com/' + user.name.first + user.name.last + user.name.last + get_year(user);
+    document.getElementById('tw_user').href = 'https://twitter.com/' + user.name.first + user.name.last + user.name.last + get_year(user);
+    document.getElementById('insta_user').href =  'https://www.instagram.com/' + user.name.first + user.name.last + user.name.last + get_year(user);
+
+  
+}
+
+getJson('https://randomuser.me/api/').then
+(user=>
+    fill_cv(user)
+); 
+
+
+
+   
