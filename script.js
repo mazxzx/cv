@@ -12,7 +12,10 @@ async function getJson(url) {
 
   }
    
-
+function getRandomCv()
+{
+    return getJson('https://randomuser.me/api/');
+}
     
     
          
@@ -52,7 +55,7 @@ async function fill_cv(user)
   
 }
 
-getJson('https://randomuser.me/api/').then
+getRandomCv().then
 (user=>
     fill_cv(user)
 ); 
