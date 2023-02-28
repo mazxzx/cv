@@ -35,7 +35,7 @@ async function fill_cv(user)
     document.getElementById('foto_perfil').src = user.picture.large;
 
     document.getElementById('nombre').innerHTML = user.name.first + ' ' + user.name.last;
-
+    document.getElementById('nombre_sobremi').innerHTML = user.name.first + ' ' + user.name.last;
     document.getElementById('numero').innerHTML =user.phone + '|' + user.cell
     document.getElementById('email').innerHTML = user.email;
 
